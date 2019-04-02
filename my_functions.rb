@@ -1,3 +1,5 @@
+require ("Date")
+
 def greet(name, time_of_day)
   return "Good #{time_of_day}, #{name.capitalize()}"
 end
@@ -35,23 +37,11 @@ def add_string_as_number(string_1, string_2)
 end
 
 def number_to_full_month_name(number)
-  if number == 1
-    return "January"
-  elsif number == 3
-    return "March"
-  elsif number == 9
-    return "September"
-  end
+  return Date::MONTHNAMES[number]
 end
 
 def number_to_short_month_name(number)
-  if number == 1
-    return "Jan"
-  elsif number == 4
-    return "Apr"
-  elsif number == 10
-    return "Oct"
-  end
+  return Date::ABBR_MONTHNAMES[number]
 end
 
 def volume_of_cube(side_length)
@@ -63,6 +53,6 @@ def fahrenheit_to_celsius(farenheit)
 end
 
 def volume_of_sphere(radius)
-  volume = (radius ** 2)*Math::PI
+  volume = (radius ** 3) * Math::PI * 4 / 3
   return volume.round(2)
 end

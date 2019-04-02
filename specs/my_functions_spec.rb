@@ -93,7 +93,7 @@ def test_return_10()
   #Given the radius of a sphere calculate the volume
   def test_volume_of_sphere()
     result = volume_of_sphere ( 2 )
-    assert_equal( 12.57, result )
+    assert_equal( 33.51, result )
   end
   #
   # #Given a value in farenheit, convert this into celsius.
